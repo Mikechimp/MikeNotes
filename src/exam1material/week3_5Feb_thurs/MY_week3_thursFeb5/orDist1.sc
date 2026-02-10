@@ -29,7 +29,7 @@ import org.sireum.justification.natded.prop._
           12 ( p | r ) by OrI2(10),
           13 ((p | q ) & (p | r)) by AndI(11, 12)
         ),
-        14 ((p | q ) & (p | r)) by OrE(1, 2, 7)
+        14 ((p | q ) & (p | r)) by OrEI(1, 2, 7)
     )
   )
 }

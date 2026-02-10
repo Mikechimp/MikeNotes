@@ -65,7 +65,7 @@ r: I can log in
 Propositional atoms:
 
 
-
+->:
 Translations:
 I am in the CS dept or I am in the ECE dept: p v q 
 I am not in the ECE dept: not q
@@ -308,7 +308,7 @@ AND elimination:
 
           P ∧ Q               P ∧ Q
 AndE1 : ---------   AndE2 : ---------
-          P                     Q
+          P                       Q
 E1 conclude left E2 conclude right
 
 
@@ -402,7 +402,7 @@ p ∧ q ∧ r ⊢ q
 
 OR introduction
 
-          P                      Q
+        P                           Q
 OrI1 : ---------        OrI2 : ---------
         P ∨ Q                   P ∨ Q
 

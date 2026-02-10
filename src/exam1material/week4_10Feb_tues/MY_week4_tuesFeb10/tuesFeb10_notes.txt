@@ -4,7 +4,27 @@ HW 3 due tonight
 
     What will the structure be?
 
+    what is the top level op? 
+    p ∨ q ∨ r: top level is the rightmost or 
+    (p ∨ q) ∨ r
 
+    Try OrE on premise 
+    SugbProof: assume p v q 
+
+    goal: r v q v p 
+    top-level is the rightmost Or 
+    could introduce OR if have r v q 
+        or if I had p 
+
+        nested OrE
+        SubProof: assume P 
+        goal: r v q v p 
+
+        SubProof: Assume q 
+        goal: r v q v p 
+        first get r v q 
+        then get r v q v p
+         
     How to build conclusion?
 
 
