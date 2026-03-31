@@ -87,7 +87,6 @@ Examples:
 ∀ x (Human(x) → Mortal(x)), ∃ x (Human(x)) ⊢ ∃ x (Mortal(x))
 
 
-
 ///
 
 (exists2.sc)
