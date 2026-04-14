@@ -74,6 +74,9 @@ if (a >= b) {
   //summary block
   Deduce(
     //what goes here?
+    1 ( max >= a) by Premise,
+    2 ( max >= b) by Premise,
+    3 ( max >= c) by Premise,
   )
 }
 
