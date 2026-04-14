@@ -4,6 +4,9 @@ HW 8 due tonight
 where Product(m, n) is the product of the integer m and
 the nonnegative integer n
 
+Base case: n == 0
+    Product(m, 0) = 0
+    Product(m, n) = ???? (a recursive call involving n-1), n > 0
 
 
 
@@ -11,17 +14,34 @@ the nonnegative integer n
 irrational number is irrational.
 
 How to write as an IF/THEN?
-
-
-
+    IF we have a rational number and an irrational number
+    THEN their sum is irrational
 
 Rational definition?
+    A number r is considered rational if r = p/q, where p and q 
+    are integers and q !=0.
 
-
+    A number is irrational if it is not rational.
 
 
 How to start the proof? 
 
+Assume we have a rational number r and an irrational number i.
+Assume, for the sake of contradiction, that i+r is rational.
+
+Since r is rational, r = p/q where p, q are integers and q != 0.
+Since i+r is rational, i+r = a/b, where a, b are integers and b != 0.
+
+We have:
+    i = (i+r) - r
+     = a/b - p/q 
+     (put it over a common denominator)
+     (show the common denominator is not 0)
+
+After doing that, you have a contradiction -- i would meet the definition
+of rational, but we assumed it was irrational.
+
+(Goal: contradiction)
 
 
 
@@ -41,11 +61,20 @@ Apply proof techniques and similar reasoning to prove correctness
 of basic programs.
 
 (Why does this matter?)
+<<<<<<< HEAD:src/exam3material/week11_9April_tues/tuesApril9_notes.txt
     things that may cause cause if done incorrectly. 
+=======
+    things that sensitive (financial, medical, any software in
+    very expensive equipment (space shuttles, planes, etc.))
+>>>>>>> 108e264a82ae7fe61e62913249b6cdb3b1b58088:src/exam3material/week11_7April_tues/tuesApril7_notes.txt
 
 ---------------------------------------------------------------
 
+<<<<<<< HEAD:src/exam3material/week11_9April_tues/tuesApril9_notes.txt
 AWS formal methods - They have methods for theirs 
+=======
+library methods (like sorting, etc.)
+>>>>>>> 108e264a82ae7fe61e62913249b6cdb3b1b58088:src/exam3material/week11_7April_tues/tuesApril7_notes.txt
 
 Library sorting algorithms 
 
@@ -116,7 +145,10 @@ Preconditions:
 
 Postconditions: 
     things we want to prove our program does
+<<<<<<< HEAD:src/exam3material/week11_9April_tues/tuesApril9_notes.txt
 
+=======
+>>>>>>> 108e264a82ae7fe61e62913249b6cdb3b1b58088:src/exam3material/week11_7April_tues/tuesApril7_notes.txt
 
 /////
 
@@ -146,8 +178,15 @@ assert(some claim)
 
 How are Logika asserts different from C# (and other languages)?
 
+<<<<<<< HEAD:src/exam3material/week11_9April_tues/tuesApril9_notes.txt
 Logika: assert is satisfied if we have Proved what it claims
 Other languages like C#: call the function then cause it to assert that 
+=======
+Logika: assert is satisfied if we have PROVED what it claims
+
+Other languages (like C#): asserts call the code, are satisfied
+    if it returns what we are asserting
+>>>>>>> 108e264a82ae7fe61e62913249b6cdb3b1b58088:src/exam3material/week11_7April_tues/tuesApril7_notes.txt
 
 
 
@@ -157,6 +196,7 @@ Other languages like C#: call the function then cause it to assert that
 Process of validating a program:
 
 
+(user input)
 
 (any assumptions needed about user input - assume)
 
@@ -172,7 +212,12 @@ program statement
 
 (claims/asserts about output/results/postconditions)
 
+<<<<<<< HEAD:src/exam3material/week11_9April_tues/tuesApril9_notes.txt
 assert statement 
+=======
+assert statement
+
+>>>>>>> 108e264a82ae7fe61e62913249b6cdb3b1b58088:src/exam3material/week11_7April_tues/tuesApril7_notes.txt
 
 
 
@@ -201,10 +246,14 @@ Premise
 Example:
 
 var input: Z = Z.prompt("Enter a positive number: ")
-assume(num > 0)
+assume(input > 0)
 var y: Z = 12
 
 //proof block? what would go there?
+Deduce(
+    1 (input > 0) by Premise,
+    2 ( y == 12 ) by Premise
+)
 
 Deduce(
     1 (input > 0) by Premise, 
@@ -223,7 +272,11 @@ Algebra* (or Algebra T)
     Deduce(
         1 ( x == 2 ) by Premise,
         2 ( x >= 2 ) by Algebra*(1),
+<<<<<<< HEAD:src/exam3material/week11_9April_tues/tuesApril9_notes.txt
         3 ( 4 > 0 ) by Algebra T  
+=======
+        3 ( 4 > 0 ) by Algebra T
+>>>>>>> 108e264a82ae7fe61e62913249b6cdb3b1b58088:src/exam3material/week11_7April_tues/tuesApril7_notes.txt
     )
 
 
@@ -253,6 +306,8 @@ We want to assert at the end that y is 4
 
 
 //////////////////////////////
+
+(do on your own)
 
 Example (max.sc):
 
@@ -369,12 +424,16 @@ Deduce(
     3 ( another == 5 - (x+2)*3 )    by Premise,
 
     //substitute in for "num" in "answer"
-    4 
+    4 ( answer == 4*(x+2) + 8 ) by Subst_<(1, 2)
 
     //substitute in for "x+2" in "another"
-    5 
+    5 ( another == 5 - (num)*3 ) by Subst_>(1, 3)
 )
 
+
+//////////////////////////////
+
+<-- stopped here, will continue on Thursday
 
 //////////////////////////////
 
